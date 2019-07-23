@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Carousel</title>
+    <link rel="stylesheet" type="text/css" href="CSS\car.css">
+    <link rel="stylesheet" href="CSS\style.css">
+    <link rel="stylesheet" href="CSS\flexbox.css">
+
+
+</head>
+<body>
+        <div class="Nav-img">
+                <header class = "main-header">
+                    <h1 class="site-name"><a href="#">The Mount Everest</a></h1>
+                    <ul class="main-nav">
+                        <li><a href="Index.html">Home</a></li>
+                        <li><a href="secondPage.html">Gallery</a></li>
+                        <!-- <li><a href="#">Nav 3</a></li>  
+                        <li><a href="secondPage.html"> Nav 4</a></li>    -->
+                    </ul>
+                </header>
+        </div>
+
+    <div class="galleryContainer">
+        <div class="slideShowContainer">
+            <div id="playPauseBtn" onclick="playPauseSlides()"></div>
+            <div class="leftArrow" onclick="plusSlides(-1)"><span class="arrow arrowLeft"></span></div>
+            <div class="rightArrow" onclick="plusSlides(1)"><span class="arrow arrowRight"></span></div>
+            <div class="captionHolder"><p class="captionText"></p></div>
+            
+
+            <div class="imageHolder">
+                <img src="img/Mount_Everest_as_seen_from_Drukair2_PLW_edit.jpg">
+                <p class="captionText"> Mount Everest view from air</p>
+            </div>
+
+            <!-- <div class="imageHolder">
+                <img src="img/Mount-Everest-Peek.jpg">
+                <p class="captionText"> Mount Everest Peak</p>
+            </div> -->
+
+            <!-- <div class="imageHolder">
+                <img src="img/stock-mount-everest-1550x804.jpg">
+                <p class="captionText"> Mount Everest Peak</p>
+            </div> -->
+
+            <div class="imageHolder">
+                <img src="img/Mt.Everest-Climbers.jpg">
+                <p class="captionText"> Mount Everest climbers</p>
+            </div>
+
+            <!-- <div class="imageHolder">
+                <img src="img/MT 2.jpg">
+                <p class="captionText"> Tenzing Norgay Sherpa from Nepal and Edmund Hillary from New Zeland were the first to summit Mt Everes in 1953. As of 2017, more than 7,600 people have reached the top of mountain and nearly 300 have perished in the attempt. </p>
+            </div>
+            <div class="imageHolder">
+                <img src="img/Mt 3.jpg">
+                <p class="captionText"> The Mt Everest, Himalays, Nepal</p>
+            </div> -->
+
+            <div class="imageHolder">
+                <img src="img/everest-summit-view.jpg">
+                <p class="captionText"> Mt Everest summit view</p>
+            </div>
+
+            <div class="imageHolder">
+                <img src="img/Mt 5.jpg">
+                <p class="captionText"> Frozen Pond at Khumbhu Glacier, near Mt Everest</p>
+            </div>
+
+            <!-- <div class="imageHolder">
+                <img src="img/Mt 6.jpg">
+                <p class="captionText"> Mountaineer Apa Sherpa climbing through the Khumbu Icefall en-route to his 20th ascent of the summit of Mt Everest, 2010</p>
+            </div>
+
+            <div class="imageHolder">
+                <img src="img/Mt 7.jpg">
+                <p class="captionText"> Edmud Hillary and Tenzing Norgay Sherpa at the top of Mt Everest, June 26, 1953</p>
+            </div>
+
+            <div class="imageHolder">
+                <img src="img/Mt 8.jpg">
+                <p class="captionText"> Mount Everest from Nepal side</p>
+            </div>
+
+
+            <div class="imageHolder">
+                <img src="img/Mt 9.jpg">
+                <p class="captionText"> Base camp for the 1988 ascent of Mount Everset via the East Kangshung Face, Tibet.</p>
+            </div>
+
+            <div class="imageHolder">
+                <img src="img/Mt 10.jpg">
+                <p class="captionText"> Climbers walking towards Helicopter prior to evacuation from Mt Everest Base Campp after Nepales-side climbing season was cancelled in April 2014</p>
+            </div> -->
+
+            <!-- <div class="imageHolder">
+                <img src="img/Mt 11.jpg">
+                <p class="captionText"> Mount Everest seen from the Plateau of Tibet</p>
+            </div> -->
+
+            <!-- <div class="imageHolder">
+                <img src="img/Mt 12.jpg">
+                <p class="captionText"> Buddhist prayer flags fluttering in front of the Everest massif; in the foreground is the Khumbu Glacier, most common route to the summit</p>
+            </div> -->
+
+            <div class="imageHolder">
+                <img src="img/Mt 13.jpg">
+                <p class="captionText"> North face of Mount Everest from Tibet, China</p>
+            </div>
+
+            <!-- <div class="imageHolder">
+                <img src="img/Mt 14.jpg">
+                <p class="captionText"> Road on the southern Plateau of Tibet near Mount Everest</p>
+            </div> -->
+
+            <div class="imageHolder">
+                <img src="img/Mt 15.jpg">
+                <p class="captionText"> Mount Everest view from southern Plateau of Tibet</p>
+            </div>
+
+            <div class="imageHolder">
+                <img src="img/Mount Everest Trek.jpg">
+                <p class="captionText"> Climber en-route to Mount Everest</p>
+            </div>
+
+            <!-- <div class="imageHolder">
+                <img src="img/Everest, Mount.jpg">
+                <p class="captionText"> Mount Everest, Nepal</p>
+            </div> -->
+
+
+        </div>
+        <div id="dotsContainer"></div>
+    </div>
+
+    <footer class="main-footer">
+            <span>&copy; Nepal Mount Everest Country, 2019</span>
+        </footer>
+
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
