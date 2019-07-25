@@ -1,18 +1,12 @@
-/* html, body {
-    padding: 10px 2px 0px 2px;
-    margin: 0px;
-}*/
+
 .galleryContainer {
-    /* background-color: aquamarine; */
     width:100%;
     height:600px;
-    max-width:1000px;
+     max-width:1000px;
     user-select: none;
-    /* box-shadow: 0px 0px 3px 1px #00000078; */
-    padding: 10px;
     box-sizing: border-box;
     margin: 0 auto;
-    margin-top: 20px;
+     margin-top: 10px;
 }
 
 .galleryContainer .slideShowContainer {
@@ -97,7 +91,6 @@
     width: 100%;
     background-color: whitesmoke;
     height: 100px;
-    /* line-height: 50px; */
     overflow: hidden;
     padding-top: 15px;
 }
@@ -105,17 +98,20 @@
     margin: 0;   
 }
 
-.galleryContainer .slideShowContainer #playPauseBtn {
+.galleryContainer .slideShowContainer .fa {
 width: 32px;
 height: 32px;
 position: absolute;
-z-index: 5;
+z-index: 1;
 margin: 5px;
 cursor: pointer;
-background-image: url("../img/playPause.png");
-/* background-color: yellowgreen; */
+color:#fff;
+/* background-image: url("../img/playPause.png"); */
 background-repeat: no-repeat;
 background-size: cover;
+}
+.galleryContainer .slideShowContainer .fa-play {
+    display:none;
 }
 
 .galleryContainer #dotsContainer{
@@ -239,3 +235,8 @@ margin-left: 0;
     from { opacity: 0; margin-top: -100px;}
     to{opacity: 1; margin-top: 0;}
 }
+
+@media (max-width: 769px) {
+}
+
+@media (max-width: 991.98px) { }

@@ -1,9 +1,19 @@
+// Toggle Menu for Mobile Devices//
+const menuBurger = document.querySelector(".menu-burger");
+const mainNav = document.querySelector(".main-nav");
+menuBurger.addEventListener('click',() => {
+    if (mainNav.style.display==='none'){
+    mainNav.style.display='block';}
+    else{mainNav.style.display='none';}
+}) //End of Toggle menu for Mobile Devices
+
+//Carousel//
 var slideIndex, slides, dots, captionText;
 function initGallery(){
     slideIndex=0;
     slides=document.getElementsByClassName("imageHolder");
-    slides[slideIndex].style.opacity = 1;
-
+    slides[slideIndex].style.opacity=1;
+   
     captionText =document.querySelector(".captionHolder .captionText");
     captionText.innerText = slides[slideIndex].querySelector(".captionText").innerText;
 
@@ -18,8 +28,7 @@ function initGallery(){
         dots.push(dot);
     }
     dots[slideIndex].classList.add("active");
-
-}
+    }
 initGallery();
 function plusSlides(n){
     moveSlide(slideIndex+n);
@@ -68,6 +77,8 @@ captionText.innerText=slides[n].querySelector(".captionText").innerText;
 captionText.style.display="block";
 
 }
+
+//Start of Auto slide, Play and Pause function in Carousel
 var timer=null;
 function setTimer(){
     timer=setInterval(function(){
@@ -77,21 +88,24 @@ function setTimer(){
 
 setTimer();
 
-function playPauseSlides(){
-    var playPauseBtn=document.getElementById("playPauseBtn");
-    if(timer==null){
-        setTimer();
-        playPauseBtn.style.backgroundPositionY="0px";
-    } else{
+var pauseBtn=document.querySelector(".fa-pause");
+var playBtn=document.querySelector(".fa-play");
+
+pauseBtn.addEventListener('click', () =>{
+    if(timer===null){
+        } else{
         clearInterval(timer);
         timer=null;
-        playPauseBtn.style,backgroundPositionY="-33px";
-    }
-}
-
-// Show and Hide Menu for Mobile devices
-const nav = document.querySelector("ul");
-
-nav.addEventListener("click", ()=>{
-nav.innerText = "Hide Menu";
+        playBtn.style.display="block";
+        pauseBtn.style.display="none";
+        }
 })
+
+playBtn.addEventListener('click', () =>{
+    if(timer===null){
+        setTimer();
+        playBtn.style.display="none";
+        pauseBtn.style.display="block"; 
+    }
+})
+//End of Carousel//

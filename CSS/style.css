@@ -3,7 +3,9 @@
 Base element styles
 =========================*/
 *{
-    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:
 }
 
 
@@ -28,6 +30,7 @@ Navigation
 
 .Nav-img .main-header {
     height: 70px;
+    position: relative;
 }
 
 h1 a,
@@ -60,7 +63,6 @@ ul li a{
 }
 .main-nav {
     display: inline-block;
-    padding-top: 25px;
     margin-top: 5px; 
 }
 
@@ -83,7 +85,6 @@ margin-left: 25px;
 text-align: justify;
 }
 .tagline {
-/* font-weight: bold; */
 color:#fff;
 font-size: 2em;
 padding-top: 3px;
@@ -97,11 +98,16 @@ display: inline-block;
     background-color:#222;
     padding-top: 15px;
     color:#fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;      
+
 }
 
 
-/*========
-Flex Box
+/*=============
+    Flex Box
 =================*/
 .main-header, 
 .main-nav ,
@@ -120,6 +126,50 @@ Flex Box
 }
 .main-header {
      align-items: center;
+}
+
+
+
+h2{
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+
+/* Menu-Burger */
+
+.main-header h1{
+    color:#fff;
+    height: 50px;
+    line-height: 50px;
+    float: left;
+}
+.Nav-img nav{
+    float: right;
+}
+.Nav-img nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.Nav-img nav ul li{
+    list-style: none;
+}
+nav ul li a {
+    text-decoration: none;
+    color:#fff;
+}
+.Nav-img .main-header .site-name a {
+    text-decoration: none;
+}
+
+.Nav-img .main-header .menu-burger {
+    color: #fff;
+    float: right;
+    line-height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
 }
 
 /*==================== 
@@ -144,7 +194,6 @@ Media Queries
         }
         .main-nav{
             margin-top: -25px;
-            padding-left: 20px;
         }
         .Nav-img .main-header .site-name {
             text-align: center;
@@ -187,7 +236,6 @@ Media Queries
         }
     .main-nav{
         margin-top: -25px;
-        padding-left: 20px;
         }
     .Nav-img .main-header .site-name {
         text-align: center;
@@ -196,14 +244,14 @@ Media Queries
     .site-name a,
     .main-nav a {
 
-        padding-bottom: 2px;
+        height: 25px;
         text-align: left;
         }
 
     .Nav-img .main-header .site-name a{
         font-size: 20px;
         padding-top: 10px;
-        padding-left: 35px;
+        padding-left: 78px;
 
         }
         .main-header, .main-nav, .row{
@@ -212,6 +260,39 @@ Media Queries
         .col{
             width: 100%;
             text-align: justify;
+        }
+
+
+        /* Toggle Menu For Mobile Devices */
+
+        header {
+            padding: 0 20px;
+        }
+        .Nav-img .main-header .menu-burger {
+            display: block;
+        }
+        .Nav-img .main-header .main-nav {
+            display: none;
+             position: absolute;
+            z-index: 2;
+            width: 100%;
+            height:calc(100vh-50px);
+            background: #333;
+            top: 50px;
+            left:0;
+            transition: 0.5s;
+            margin-top:9px;
+        }
+
+        .Nav-img .main-header ul {
+             display:block;
+             text-align: center;
+        }
+        .Nav-img .main-header ul a{
+            border-bottom: 1px solid rgba(0,0,0,.2);
+        }
+        .Nav-img .main-header{
+            height: 60px;
         }
 }
 
