@@ -183,10 +183,6 @@ Media Queries
 
 @media (max-width: 575.98px) { 
 
-    *{
-        font-size: 16px;
-    }
-
     .Nav-img .main-header{
         height: 130px;
     }
@@ -213,10 +209,10 @@ Media Queries
 }
 
 @media (max-width: 767.98px) { 
-    *{
+    /* *{
         font-size: 16px;
     }
-    
+     */
     .tagline {
         padding-top: 35px;
         font-size: 1.48em;

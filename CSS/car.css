@@ -1,7 +1,7 @@
 /* Parent container for carousel */
 .galleryContainer {  
     width:100%;
-    height:535px;
+    height:540px;
     max-width:1000px;
     user-select: none;
     box-sizing: border-box;
@@ -97,7 +97,7 @@
     text-align: center;
     width: 100%;
     background-color: whitesmoke;
-    height: 70px;
+    height: 75px;
     overflow: hidden;
     padding-bottom: 10px;
 }
@@ -247,7 +247,28 @@ margin-left: 0;
 }
 
 /* Medai Queries */
-@media (max-width: 575.98px) {
+
+
+@media (max-width: 767.98px) {
+    .galleryContainer .slideShowContainer .fa {
+        font-size: 18px;
+        padding: 7px;
+    }
+
+    .galleryContainer .slideShowContainer .imageHolder img, img{
+         height: 450px;
+    }
+
+    .galleryContainer {
+        margin-top: 10px;
+    }
+
+    .galleryContainer .slideShowContainer .captionHolder{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 376px) {
     .galleryContainer .slideShowContainer .fa {
         font-size: 18px;
         padding: 7px;
@@ -257,21 +278,16 @@ margin-left: 0;
         margin-top: 10px;
     }
     .galleryContainer .slideShowContainer .imageHolder img, img{
-        height: 4500px;
-    }
-}
-
-@media (max-width: 767.98px) {
-    .galleryContainer .slideShowContainer .fa {
-        font-size: 18px;
-        padding: 7px;
+        height: 450px;
     }
 
-.galleryContainer .slideShowContainer .imageHolder img, img{
-    height: 450px;
-}
-
-.galleryContainer {
-        margin-top: 10px;
+    .galleryContainer .slideShowContainer .captionHolder{
+        font-size: 12px;
+    }
+    .galleryContainer {
+        margin-top: 20px;
+    }
+    .tag{
+        margin-top: 12px;
     }
 }
