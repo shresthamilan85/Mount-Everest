@@ -17,9 +17,10 @@ function initGallery(){
     captionText =document.querySelector(".captionHolder .captionText");
     captionText.innerText = slides[slideIndex].querySelector(".captionText").innerText;
 
-    dots=[];
+    dots=[]; //Array for dotsContainer
     var dotsContainer=document.getElementById("dotsContainer");
 
+    //Creating dots in the dotsContainer
     for(var i=0; i<slides.length; i++) {
         var dot=document.createElement("span");
         dot.classList.add("dots");
@@ -44,7 +45,6 @@ function moveSlide(n){
 
 if(n>slideIndex){
     if(n>=slides.length){n=0;}
-    // if(n>=slides.length){n=slides.length-1;}
     moveSlideAnimClass.forCurrent="moveLeftCurrentSlide";
     moveSlideAnimClass.forNext="moveLeftNextSlide";
     slideTextAnimClass="slideTextFromTop";

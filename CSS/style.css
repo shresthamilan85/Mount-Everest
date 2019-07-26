@@ -23,9 +23,13 @@ ul{
     list-style: none;
 }
 
+h1 a,
+ul li a{
+    color: #fff;
+}
 /*============
 Navigation
-=================*/
+===============*/
 
 
 .Nav-img .main-header {
@@ -33,13 +37,8 @@ Navigation
     position: relative;
 }
 
-h1 a,
-ul li a{
-    color: #fff;
-}
-
  .Nav-img {
-    margin: 0 10px;
+    margin: 0 10px; 
 }
 .main-header {
     background: #222;
@@ -87,28 +86,31 @@ text-align: justify;
 .tagline {
 color:#fff;
 font-size: 2em;
-padding-top: 3px;
 display: inline-block;
+margin-top: 5px;
 
+}
+.wrap{
+   min-height: calc(100vh - 58px);
 }
 
 .main-footer{
     text-align: center;
-    height: 45px;
-    background-color:#222;
     padding-top: 15px;
+    height: 40px;
+    background-color:#222;
     color:#fff;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 2.5rem;      
-
+    margin: 0 10px;
+}
+.tag{
+    text-align: center;
+    font-size: 28px;
 }
 
 
-/*=============
-    Flex Box
-=================*/
+/*================================
+    Flex Box for responsive layout
+==================================*/
 .main-header, 
 .main-nav ,
 .row {
@@ -133,10 +135,13 @@ display: inline-block;
 h2{
     padding-bottom: 5px;
     padding-top: 5px;
+    margin-top: 5px;
 }
 
 
-/* Menu-Burger */
+/*===========
+ Toggle Menu 
+ ============*/
 
 .main-header h1{
     color:#fff;
@@ -181,36 +186,29 @@ Media Queries
     *{
         font-size: 16px;
     }
-    .galleryContainer .slideShowContainer .imageHolder img, img{
-        height: 250px;
+
+    .Nav-img .main-header{
+        height: 130px;
+    }
+    .main-nav{
+        margin-top: -25px;
+    }
+    .Nav-img .main-header .site-name {
+        text-align: center;
     }
 
-        .galleryContainer {
-            height:350px;
-        }
+    .site-name a,
+    .main-nav a {
 
-         .Nav-img .main-header{
-            height: 130px;
-        }
-        .main-nav{
-            margin-top: -25px;
-        }
-        .Nav-img .main-header .site-name {
-            text-align: center;
-        }
+        padding-bottom: 2px;
+        text-align: left;
+    }
+    .Nav-img .main-header .site-name a{
+        font-size: 20px;
+        padding-top: 10px;
+        padding-left: 35px;
 
-        .site-name a,
-        .main-nav a {
-
-            padding-bottom: 2px;
-            text-align: left;
-        }
-        .Nav-img .main-header .site-name a{
-            font-size: 20px;
-            padding-top: 10px;
-            padding-left: 35px;
-
-        }
+    }
 
 }
 
@@ -218,9 +216,7 @@ Media Queries
     *{
         font-size: 16px;
     }
-    .galleryContainer .slideShowContainer .imageHolder img, img{
-        height: 400px;
-    }
+    
     .tagline {
         padding-top: 35px;
         font-size: 1.48em;
@@ -228,7 +224,7 @@ Media Queries
         }
 
         .galleryContainer {
-            height:450px;
+            height:515px;
         }
 
     .Nav-img .main-header{
@@ -250,8 +246,8 @@ Media Queries
 
     .Nav-img .main-header .site-name a{
         font-size: 20px;
-        padding-top: 10px;
-        padding-left: 78px;
+        padding-top: 5px;
+        padding-left: 10px;
 
         }
         .main-header, .main-nav, .row{
@@ -261,9 +257,18 @@ Media Queries
             width: 100%;
             text-align: justify;
         }
+        h2{
+            margin-top: 15px;
+        }
+        .tag{
+            text-align: center;
+            font-size: 22px;
+        }
 
 
-        /* Toggle Menu For Mobile Devices */
+        /*=============================
+         Toggle Menu For Mobile Devices 
+         ===============================*/
 
         header {
             padding: 0 20px;
@@ -301,11 +306,18 @@ Media Queries
         padding-top: 35px;
         
         }
+        .tag{
+            text-align: center;
+        }
 
 }
 
-@media (max-width: 1199.98px) { .tagline {
+@media (max-width: 1199.98px) {
+    .tagline {
+        padding-top: 35px;
     
-    padding-top: 35px;
-    
-    } }
+    }
+    .tag{
+        text-align: center;
+    }
+}

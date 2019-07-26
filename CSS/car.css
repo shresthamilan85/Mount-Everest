@@ -1,14 +1,14 @@
-
-.galleryContainer {
+/* Parent container for carousel */
+.galleryContainer {  
     width:100%;
-    height:600px;
-     max-width:1000px;
+    height:535px;
+    max-width:1000px;
     user-select: none;
     box-sizing: border-box;
-    margin: 0 auto;
-     margin-top: 10px;
+    margin: 3px auto;
 }
 
+/* Parent container for the image with relative position*/
 .galleryContainer .slideShowContainer {
     width: 100%;
     height:90%;
@@ -17,6 +17,7 @@
     position: relative;
 }
 
+/* Image continer with absolute position realtive to slideShowContainer*/
 .galleryContainer .slideShowContainer .imageHolder {
     width: 100%;
     height: 100%;
@@ -32,6 +33,8 @@
  .galleryContainer .slideShowContainer .imageHolder .captionText {
     display: none;
 }
+
+/* right and left arrow conainer */
 .galleryContainer .slideShowContainer .leftArrow, .galleryContainer .slideShowContainer .rightArrow{
     width: 50px;
     background: transparent;
@@ -44,6 +47,7 @@
     transform: translateY(-50%);
     border-top-right-radius:10px;
     border-bottom-right-radius:10px;
+    
 }
 .galleryContainer .slideShowContainer .rightArrow{
     left: auto;
@@ -72,10 +76,13 @@
     top: 0;
     bottom: 0;
 }
+
+/* Rotating left arrow with negative 135 degree */
 .galleryContainer .slideShowContainer .arrow.arrowLeft{
     transform:rotateZ(-135deg);
 }
 
+/* Rotating right arrow wiht positive 45 degree */
 .galleryContainer .slideShowContainer .arrow.arrowRight{
         transform:rotateZ(45deg);
 }
@@ -90,14 +97,15 @@
     text-align: center;
     width: 100%;
     background-color: whitesmoke;
-    height: 100px;
+    height: 70px;
     overflow: hidden;
-    padding-top: 15px;
+    padding-bottom: 10px;
 }
  .galleryContainer .slideShowContainer .captionHolder .captionText {
-    margin: 0;   
+    margin: 14px;   
 }
 
+/* Bootstrap class .fa */
 .galleryContainer .slideShowContainer .fa {
 width: 32px;
 height: 32px;
@@ -106,20 +114,22 @@ z-index: 1;
 margin: 5px;
 cursor: pointer;
 color:#fff;
-/* background-image: url("../img/playPause.png"); */
-background-repeat: no-repeat;
-background-size: cover;
+font-size: 25px;
+padding: 10px;
 }
+
+/* Bootstrap class .fa-play */
 .galleryContainer .slideShowContainer .fa-play {
     display:none;
 }
 
 .galleryContainer #dotsContainer{
     width:100%;
-    height:10%;
+    height:7%;
     text-align: center;
-    padding-top: 20px;
+    padding-top: 15px;
     box-sizing: border-box;
+    margin-top:7px;
 }
 
 .galleryContainer #dotsContainer .dots{
@@ -141,7 +151,7 @@ background-size: cover;
 margin-left: 0; 
 }
 
-/.galleryContainer .moveLeftCurrentSlide{
+.galleryContainer .moveLeftCurrentSlide{
     animation-name: moveLeftCurrent;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -216,7 +226,7 @@ margin-left: 0;
 
 .slideTextFromBottom{
     animation-name: slideTextFromBottom;
-    animation-duration: .9s;
+    animation-duration: .3s;
     animation-timing-function: ease-out;
 }
 
@@ -227,7 +237,7 @@ margin-left: 0;
 
 .slideTextFromTop{
     animation-name: slideTextFromTop;
-    animation-duration: .9s;
+    animation-duration: .3s;
     animation-timing-function: ease-out;
 }
 
@@ -236,7 +246,32 @@ margin-left: 0;
     to{opacity: 1; margin-top: 0;}
 }
 
-@media (max-width: 769px) {
+/* Medai Queries */
+@media (max-width: 575.98px) {
+    .galleryContainer .slideShowContainer .fa {
+        font-size: 18px;
+        padding: 7px;
+    }
+
+    .galleryContainer {
+        margin-top: 10px;
+    }
+    .galleryContainer .slideShowContainer .imageHolder img, img{
+        height: 4500px;
+    }
 }
 
-@media (max-width: 991.98px) { }
+@media (max-width: 767.98px) {
+    .galleryContainer .slideShowContainer .fa {
+        font-size: 18px;
+        padding: 7px;
+    }
+
+.galleryContainer .slideShowContainer .imageHolder img, img{
+    height: 450px;
+}
+
+.galleryContainer {
+        margin-top: 10px;
+    }
+}

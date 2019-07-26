@@ -7,10 +7,11 @@
     <title>Carousel</title>
     <link rel="stylesheet" type="text/css" href="CSS\car.css">
     <link rel="stylesheet" href="CSS\style.css">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> <!--Bootstrap CDN-->
 
 </head>
 <body>
+    <div class='wrap'>
         <div class="Nav-img">
                 <header class = "main-header">
                     <h1 class="site-name"><a href="#">The Mount Everest</a></h1>
@@ -20,65 +21,67 @@
                     </ul>
                     <div class="menu-burger"><i class="fa fa-bars" aria-hidden="true"></i></div> 
                 </header>
+            <h2 class="tag">The highest peak in the world</h2>
 
-    <div class="galleryContainer">
-        <div class="slideShowContainer">
-            <i class="fa fa-play" aria-hidden="true" onclick="playPauseSlides()"></i>
-            <i class="fa fa-pause" aria-hidden="true"></i>
-            <!-- <div id="playPauseBtn" onclick="playPauseSlides()"></div> -->
-            <div class="leftArrow" onclick="plusSlides(-1)"><span class="arrow arrowLeft"></span></div>
-            <div class="rightArrow" onclick="plusSlides(1)"><span class="arrow arrowRight"></span></div>
-            <div class="captionHolder"><p class="captionText"></p></div>
-            
+        <div class="galleryContainer"> <!--Container for the carousel that will wrap the whole gallery-->
+            <div class="slideShowContainer">
+                <i class="fa fa-play" aria-hidden="true" onclick="playPauseSlides()"></i> <!--Bootstrap icons for play buton-->
+                <i class="fa fa-pause" aria-hidden="true"></i> <!--Bootstrap icons for pause buton-->
+                <!-- <div id="playPauseBtn" onclick="playPauseSlides()"></div> -->
+                <div class="leftArrow" onclick="plusSlides(-1)"><span class="arrow arrowLeft"></span></div> <!--Left arrow for carousel-->
+                <div class="rightArrow" onclick="plusSlides(1)"><span class="arrow arrowRight"></span></div><!--Right arrow for carousel-->
+                <div class="captionHolder"><p class="captionText"></p></div>
+                
 
-            <div class="imageHolder">
-                <img src="img/Mount_Everest_as_seen_from_Drukair2_PLW_edit.jpg">
-                <p class="captionText"> Mount Everest view from air</p>
-            </div>
+                <div class="imageHolder">
+                    <img src="img/Mount_Everest_as_seen_from_Drukair2_PLW_edit.jpg">
+                    <p class="captionText"> Mount Everest view from air</p>
+                </div>
 
-            <div class="imageHolder">
-                <img src="img/Mt.Everest-Climbers.jpg">
-                <p class="captionText"> Mount Everest climbers</p>
-            </div>
+                <div class="imageHolder">
+                    <img src="img/Mt.Everest-Climbers.jpg">
+                    <p class="captionText"> Mount Everest climbers</p>
+                </div>
 
-            <div class="imageHolder">
-                <img src="img/everest-summit-view.jpg">
-                <p class="captionText"> Mt Everest summit view</p>
-            </div>
+                <div class="imageHolder">
+                    <img src="img/everest-summit-view.jpg">
+                    <p class="captionText"> Aerial view of Mt Everest summit</p>
+                </div>
 
-            <div class="imageHolder">
-                <img src="img/Mt 5.jpg">
-                <p class="captionText"> Frozen Pond at Khumbhu Glacier, near Mt Everest</p>
-            </div>
+                <div class="imageHolder">
+                    <img src="img/Mt 5.jpg">
+                    <p class="captionText"> Frozen Pond at Khumbhu Glacier, near Mt Everest</p>
+                </div>
 
-            <div class="imageHolder">
-                <img src="img/Mt 13.jpg">
-                <p class="captionText"> North face of Mount Everest from Tibet, China</p>
-            </div>
+                <div class="imageHolder">
+                    <img src="img/Mt 13.jpg">
+                    <p class="captionText"> North face of Mount Everest from Tibet, China</p>
+                </div>
 
-            <div class="imageHolder">
-                <img src="img/Mt 15.jpg">
-                <p class="captionText"> Mount Everest view from southern Plateau of Tibet</p>
-            </div>
+                <div class="imageHolder">
+                    <img src="img/Mt 15.jpg">
+                    <p class="captionText"> Mount Everest view from southern Plateau of Tibet</p>
+                </div>
 
-            <div class="imageHolder">
-                <img src="img/Mount Everest Trek.jpg">
-                <p class="captionText"> Climber en-route to Mount Everest</p>
-            </div>
+                <div class="imageHolder">
+                    <img src="img/Mount Everest Trek.jpg">
+                    <p class="captionText"> Climber en-route to Mount Everest</p>
+                </div>
 
 
+            </div> <!--Container for dots below the image in carousel, Javascript will create the element in this container-->
+            <div id="dotsContainer"></div>
         </div>
-        <div id="dotsContainer"></div>
     </div>
 </div>
 
 
     <footer class="main-footer">
-            <span>&copy; Nepal Mount Everest Country, 2019</span>
-        </footer>
+            <span>&copy; Nepal, country of Mount Everest</span>
+    </footer>
 
-    
     <script src="js/script.js"></script>
     <!-- <script src="Js/burger.js"></script> -->
+
 </body>
 </html>
